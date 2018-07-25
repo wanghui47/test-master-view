@@ -1,0 +1,23 @@
+<div class="sme-arrange-stack-v sme-position-stretch sme-layout-relative">
+    <sme-master-view #masterView [total]="smeTreeTable.renderedItems.length" header="Test Master View" [showFilter]="false" [showRefresh]="false"
+        showSelection="true" [(selection)]="selection" (clearSelection)="clearSelection()">
+        <sme-action-bar #actionBar>
+            <div class="sme-position-flex-none">
+                <sme-action-button #action [text]="'Update Data'" [iconClass]="'sme-icon sme-icon-add'" (execute)="updateData()"></sme-action-button>
+                <sme-action-button #action [text]="'test1'" [iconClass]="'sme-icon sme-icon-add'"></sme-action-button>
+                <sme-action-button #action [text]="'test2'" [iconClass]="'sme-icon sme-icon-add'"></sme-action-button>
+                <sme-action-button #action [text]="'test3'" [iconClass]="'sme-icon sme-icon-add'"></sme-action-button>
+                <sme-action-button #action [text]="'test4'" [iconClass]="'sme-icon sme-icon-add'"></sme-action-button>
+                <sme-action-button #action [text]="'test5'" [iconClass]="'sme-icon sme-icon-add'"></sme-action-button>
+            </div>
+        </sme-action-bar>
+
+        <sme-tree-table #smeTreeTable class="sme-layout-absolute sme-position-inset-none" [items]="tree$ | async" selectionMode="multiple"
+            [(selection)]="selection" [linkParentChildrenSelections]="false" [showAllItemCheckbox]="false">
+            <sme-tree-table-column field="name" header="Name">
+            </sme-tree-table-column>
+            <sme-tree-table-column field="ipAddress" header="Ip Address">
+            </sme-tree-table-column>
+        </sme-tree-table>
+    </sme-master-view>
+</div>

@@ -1,0 +1,13 @@
+{
+    "//": "manifest section",
+    "Manifest_displayName": "Test Master View",
+    "Manifest_description": "Test Master View Description",
+    "Manifest_category": "SME",
+
+    "//": "TestMasterView",
+    "TestMasterView_title": "Test Master View",
+
+    "//": "about",
+    "TestMasterView_about": "Test Master View About",
+    "TestMasterView_aboutDescription": "Test Master View About Description"
+}
